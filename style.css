@@ -1,0 +1,310 @@
+/*Css sıfırlama*/
+
+* {
+  margin: 0;
+  padding: 0;
+  text-decoration: none;
+  list-style: none;
+  box-sizing: border-box;
+}
+
+:root {
+  /*Renkler*/
+  --main-color: #ffa343;
+  --text-color: #fff;
+  --bg-color: #000;
+
+  /*Yazı boyutları*/
+
+  --h1-font: 6rem;
+  --h2-font: 3rem;
+  --p-font: 1rem;
+
+  /*Animasyon*/
+  --transition: all 0.5s ease;
+}
+
+body {
+  background-color: var(--bg-color);
+  color: var(--text-color);
+  overflow-x: hidden;
+}
+
+/*Ortak .yapılar*/
+
+.button {
+  display: inline-block;
+  background-color: var(--main-color);
+  padding: 15px 40px;
+  color: var(--bg-color);
+  border-radius: 5px;
+  transition: var(--transition);
+  border: 2px solid transparent;
+  width: 30%;
+  margin-left: 120px;
+  font-size: 15x;
+  
+  
+}
+
+.home .button{
+  font-size: 20px;
+  text-align: center;
+  width: 30%;
+
+}
+
+.button:hover {
+  transform: translate(10px);
+  background-color: transparent;
+  border: 2px solid var(--text-color);
+  color: var(--text-color);
+}
+
+.main-text {
+  color: var(--main-color);
+  font-size: 20px;
+  text-transform: uppercase;
+  margin-bottom: 10px;
+  letter-spacing: 6px;
+}
+
+header {
+  width: 100%;
+  display: flex;
+  justify-content: space-between;
+  padding: 30px 20px;
+  backdrop-filter: blur(35px);
+  align-items: center;
+  position: fixed;
+  z-index: 1000;
+  top: 0;
+  right: 0;
+  flex-wrap: wrap;
+}
+
+.logo {
+  color: var(--text-color);
+  font-size: 40px;
+
+  font-weight: 800;
+}
+
+.logo span {
+  color: var(--main-color);
+}
+
+.navbar {
+  display: flex;
+  gap: 20px;
+}
+
+.navbar a {
+  color: var(--text-color);
+  margin: 15px 0;
+  font-weight: 600;
+  font-size: var(--p-font);
+  transition: var(--transition);
+  text-decoration: underline;
+}
+
+.navbar a:hover {
+  color: var(--main-color);
+}
+
+.header-right {
+  display: flex;
+  gap: 15px;
+}
+
+.header-right a {
+  color: var(--text-color);
+  transition: var(--transition);
+  font-size: 20px;
+}
+
+.header-right a:hover {
+  color: var(--main-color);
+  transform: translateY(-5px);
+}
+
+/*Banner Alanı*/
+
+.home {
+  background-image: linear-gradient(
+      to left,
+      rgba(0, 0, 0, 0.6),
+      rgba(0, 0, 0, 0.3)
+    ),
+    url(./images/Background.jpg);
+  width: 100%;
+  height: 100vh;
+  background-position: center;
+  background-size: cover;
+  position: relative;
+  display: flex;
+  align-items: flex-start;
+  flex-direction: column;
+
+  justify-content: center;
+}
+
+.home-text h1 {
+  font-size: var(--h1-font);
+  font-weight: 800;
+  line-height: 0.9;
+  margin-bottom: 20px;
+}
+
+.home-text {
+  margin-top: 80px;
+  margin-left: 15px;
+}
+
+.home-text p {
+  font-size: var(--p-font);
+  color: white;
+  font-weight: 500;
+  margin-bottom: 20px;
+}
+
+.holiday {
+  display: grid;
+  grid-template-columns: repeat(2, 1fr);
+  gap: 10rem;
+  align-items: center;
+  padding: 15px 20px;
+}
+
+.holiday-img img {
+  width: 100%;
+  height: auto;
+  border-radius: 10px;
+}
+
+.holiday-text {
+  display: flex;
+  flex-direction: column;
+  gap: 15px;
+}
+
+.holiday-text .main-text .h5{
+  text-align: center;
+}
+
+
+/*Turlar Alanı*/
+
+.tour h2 {
+  text-align: center;
+  font-size: var(--h2-font);
+  font-weight: 800;
+  margin-bottom: 15px;
+  margin-top: 30px;
+}
+
+.tour-content {
+  display: grid;
+  grid-template-columns: repeat(auto-fit, minmax(250px, auto));
+gap: 3rem;
+padding: 15px 20px;
+}
+
+.box img {
+  width: 100%;
+  height: 100%;
+  filter: brightness(70%);
+  object-fit: cover;
+  border-radius: 10px;
+  transition: var(--transition);
+}
+
+.box img:hover{
+    filter: brightness(90%) hue-rotate(50deg);
+}
+
+.box{
+    position: relative;
+}
+
+
+
+.box h6{
+   position: absolute;
+   font-size: 20px;
+   bottom: 90px;
+   left: 25px;
+}
+
+.box h4{
+    position: absolute;
+font-size: 25px;
+   bottom: 45px;
+   left: 25px;
+}
+
+
+.center-button{
+    margin-top: 3rem;
+    text-align: center;
+}
+
+
+footer{
+
+
+display: grid;
+grid-template-columns: repeat(auto-fit,minmax(200px,auto));
+gap: 2rem;
+padding: 15px 20px;
+margin-top: 20px;
+
+
+}
+
+.footer-col{
+    display: flex;
+    flex-direction: column;
+    gap: 1rem;
+}
+
+.footer-col a{
+    color: #979797;
+    transition: var(--transition);
+    
+}
+
+.footer-col a:hover{
+    transform: translateX(-5px);
+    color: var(--text-color);
+}
+
+.social a{
+    display: inline-flex;
+    width: 45px;
+    height: 45px;
+    background-color: #202020;
+    align-items: center;
+    justify-content: center;
+    border-radius: 50%;
+    margin: 10px;
+    margin-left: 30px;
+
+    }
+
+   
+
+
+/*Resposive */
+
+@media (max-width: 700px) {
+  :root {
+    --h1-font: 2rem;
+    --h2-font: 2rem;
+    --p-font: 15px;
+  }
+
+  .holiday {
+    grid-template-columns: 1fr;
+  }
+}
