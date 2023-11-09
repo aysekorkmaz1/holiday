@@ -6,4 +6,6 @@ Bu Proje HTML5 ve CSS kullanılarak hazırlanmıştır.
 
 Harici Kütüphane kullanılmamıştır.
 
-![](ekran kaydı.gif)
+<h3>Ekran Görüntüsü</h3>
+
+![](ekran.gif)
